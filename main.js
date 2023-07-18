@@ -62,7 +62,20 @@ async function getPost(id) {
     postContainer.appendChild(title);
     postContainer.appendChild(body);
 
-    dataComments.map((comment) => )
+    dataComments.map((comment) => {});
+}
+
+function createComment(comment) {
+    const div = document.createElement("div");
+    const email = document.createElement("h3");
+    const body = document.createElement("p");
+
+    email.innerText = comment.email;
+    body.innerText = comment.body;
+
+    div.appendChild(email);
+    div.appendChild(body);
+    commentsContainer.appendChild(div);
 }
 
 if (!postId) {
