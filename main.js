@@ -91,8 +91,8 @@ async function postComment(comment) {
         method: "POST",
         body: comment,
         headers: {
-            "Content-type": "application/json"
-        }
+            "Content-type": "application/json",
+        },
     });
 
     const data = await response.json();
@@ -109,7 +109,7 @@ if (!postId) {
 
         let comment = {
             email: emailInput.value,
-            body: bodyInput.value
+            body: bodyInput.value,
         };
 
         comment = JSON.stringify(comment);
